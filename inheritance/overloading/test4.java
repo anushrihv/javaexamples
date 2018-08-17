@@ -1,3 +1,5 @@
+//works fine
+
 public class test4{
 
   void show(String... a){

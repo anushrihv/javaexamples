@@ -1,6 +1,12 @@
+//number 5 is printed
+
 class Main{
-  void show(Long a){
+  void show(Number a){
     System.out.println("number"+a);
+  }
+
+  void show(Long a){
+    System.out.println("long"+a);
   }
 
   void show(int a){

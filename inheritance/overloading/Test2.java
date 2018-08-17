@@ -22,7 +22,8 @@ public class Test2{
   public static void main(String[] args){
     Test2 t = new Test2();
     Fruit f = new Fruit();
-    Apple a = new Apple();
-    t.show(a);
+    Apple a = new Apple();       //within fruit
+    Fruit f2 = new Apple();     //within fruit
+    t.show(f2);
   }
 }
