@@ -4,11 +4,15 @@ import java.io.*;
 
 class Dog implements Serializable{
   String name;
+  String breed;
+  int dogid;
   transient Collar c;
 
-  public Dog(String str,Collar collar){
+  public Dog(String str,Collar collar,String breed,int dogid){
     name=str;
     c=collar;
+    this.breed = breed;
+    this.dogid = dogid;
   }
 
 }
@@ -24,7 +28,7 @@ class Collar{
 class Main{
   public static void main(String[] args) {
     Collar c = new Collar(5);
-    Dog d = new Dog("dog1",c);
+    Dog d = new Dog("dog1",c,"beagle",1);
     try{
         ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream("test.txt"));
         ObjectInputStream is = new ObjectInputStream(new FileInputStream("test.txt"));
