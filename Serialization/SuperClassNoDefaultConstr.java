@@ -15,7 +15,7 @@ class Super2 extends Super1{
 
   }
 
-  Super2(int val){
+  Super2(int val){''
     a=val;
   }
 }

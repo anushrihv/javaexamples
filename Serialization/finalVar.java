@@ -2,7 +2,7 @@ import java.io.*;
 
 class Test implements Serializable{
   private static final long serialVersionUID = 42l;
-    int a=20 ;
+    transient final int a=20 ;
 
 }
 

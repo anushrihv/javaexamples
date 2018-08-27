@@ -12,7 +12,7 @@ class Test implements Serializable{
   private void writeObject(ObjectOutputStream os){
     try{
 
-      os.defaultWriteObject();
+      //os.defaultWriteObject();
       os.writeInt(obj.x);
     }catch(Exception e){
       System.out.println("within custom writeObject");
@@ -22,15 +22,15 @@ class Test implements Serializable{
 
   private void readObject(ObjectInputStream is){
     try{
-      
-      is.defaultReadObject();
+
+      //is.defaultReadObject();
       obj=new Another();
       obj.x=is.readInt();
     }catch(IOException i){
       i.printStackTrace();
-    }catch(ClassNotFoundException c){
-      c.printStackTrace();
-    }
+    }//catch(ClassNotFoundException c){
+    //   c.printStackTrace();
+    // }
   }
 
 }
