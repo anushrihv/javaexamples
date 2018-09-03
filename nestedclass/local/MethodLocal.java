@@ -9,15 +9,26 @@ class MethodLocal{
         System.out.println("within method local inner class"+var);
       }
     }
+
+    class Inner2{
+
+    }
     //var=30;
 
       Inner in = new Inner();
       in.show();
   }
 
+  void fun2(){
+    class Inner{
+
+    }
+  }
+
   public static void main(String[] args) {
     MethodLocal m = new MethodLocal();
     m.fun();
+    m.fun2();
   }
 
 }

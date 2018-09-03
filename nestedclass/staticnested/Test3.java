@@ -1,14 +1,14 @@
 class Outer{
-  static class Inner{
+  static int var;
+  class Inner{
     void show(){
-      System.out.println("inner class");
+      System.out.println("inner class"+var);
     }
   }
 }
 
 public class Test3{
   public static void main(String[] args) {
-    Outer.Inner i = new Outer.Inner();
-    i.show();
+  Outer.Inner i = new Outer.Inner();
   }
 }

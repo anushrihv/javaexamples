@@ -1,14 +1,30 @@
-//trying to use static within inner classes
+//trying to use static within inner class
+
+class Super{
+  void show(){
+    System.out.println("within super");
+  }
+}
 
 class Outer{
-  class Inner{
-    /*public static void main(String args[]){
-      System.out.println("Hello");
-    }*/
-    public static final int var;
+
+   Super show(){
+    class Inner extends Super{
+      int var=20;
+      void show(){
+        System.out.println("within inner ");
+      }
+    }
+
+    Inner i = new Inner();
+    return i;
   }
 
+
   public static void main(String args[]){
-    //Outer.Inner i = new Outer.Inner();
+    Outer o = new Outer();
+    Super s = o.show();
+    s.show();
+
   }
 }
