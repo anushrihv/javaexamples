@@ -26,7 +26,7 @@ class Student implements Cloneable{
   public static void main(String[] args) throws CloneNotSupportedException{
     Student s1= new Student("s1",1);
     Student s2 = (Student) s1.clone();
-    System.out.println(s1.t==s2.t);        //returns false
+    System.out.println(s1==s2);        //returns false
 
   }
 }

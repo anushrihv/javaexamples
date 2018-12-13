@@ -4,9 +4,9 @@ class Test implements Serializable{
 
   private static final long serialVersionUID = 42l;
 
-  int a=10 ;
+  static int a=10 ;
   int b=20 ;
-  int c;
+
 
 }
 
@@ -21,6 +21,8 @@ class TestSe{
       catch(IOException io){
         io.printStackTrace();
       }
+
+
   }
 }
 
@@ -29,7 +31,7 @@ class TestDe{
     try{
         ObjectInputStream is = new ObjectInputStream(new FileInputStream("test.ser"));
         Test t2=(Test) is.readObject();
-        System.out.println("after reading "+t2.a+" "+t2.b+" "+t2.c);
+        System.out.println("after reading "+t2.a+" "+t2.b);
       }catch(ClassNotFoundException c){
         c.printStackTrace();
       }catch(IOException io){

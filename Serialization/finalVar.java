@@ -4,6 +4,10 @@ class Test implements Serializable{
   private static final long serialVersionUID = 42l;
     transient final int a=20 ;
 
+    Test(){
+      System.out.println("constructor called");
+    }
+
 }
 
 class TestSe{
